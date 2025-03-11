@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="header-mob">
+    <div class="header-mob-items">
+        <h1>MONT DES OLIVIERS DE BERTHEE</h1>
+        <H3>Eglise Adventiste du 7e Jour</H3>
+        <p>Plus d'une centaine de membres</p>
+    </div>
+
+    <div class="header-mob-items">
+        <img src="{% static 'images/church.jpg' %}" alt="L'eglise durant la journee mondiale des eclaireurs" style="width: 100%; height: auto; display: block; max-width: 500px;">
+    </div>
+</div>
+
+<div class="middle-mob">
+    <div class="middle-mob-items">
+        <h5>Nos Jeunes (JA)</h5>
+        <div class="items-boxes">
+
+        </div>
+    </div>
+
+    <div class="middle-mob-items">
+        <h5>Louanges et Adorations</h5>
+        <div class="items-boxes">
+
+        </div>
+    </div>
+
+    <div class="middle-mob-items">
+        <h5>Les Enfants</h5>
+        <div class="items-boxes">
+
+        </div>
+    </div>
+</div>
+
+<div class="middle-mob-2">
+    <div class="middle-mob-2-items">
+        <h4>Un phare spirituel pour Berthé</h4>
+        <p>Depuis 2011, l'Église Mont des Oliviers est un pilier de foi<br> et de solidarité pour la communauté de Berthé, offrant réconfort<br> et espoir à ses habitants.</p>
+    </div>
+
+    <div class="middle-mob-2-items">
+        <img src="{% static 'images/church.jpg' %}" alt="L'eglise durant la journee mondiale des eclaireurs" style="width: 100%; height: auto; display: block; max-width: 500px;">
+    </div>
+</div>
+
+
+{% endblock %}
