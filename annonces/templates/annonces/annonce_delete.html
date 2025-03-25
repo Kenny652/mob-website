@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-space">
+   <form action="." method="post"> {% csrf_token %}
+        <h3>Voulez vous effacé l'annonce {{ object.title }}</h3>
+        <p><input type="submit" value="Yes"/><a href="../"></a></p>
+   </form>
+</div>
+
+{% endblock %}

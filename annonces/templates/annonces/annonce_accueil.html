@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-space container mt-5">
+    <h1>Annonces</h1>
+    <h4>Selectionnez une option</h4>
+    <div class="middle-mob">
+        <div class="middle-mob-items">
+            <h3>Voir Annonces</h3>
+            <a href="{% url 'annonces:annonce-list' %}" class="btn btn-primary">Entrer</a>
+        </div>
+        <div class="middle-mob-items">
+            <h3>Creer une Annonce</h3>
+            <a href="{% url 'annonces:annonce-create' %}" class="btn btn-primary">Entrer</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

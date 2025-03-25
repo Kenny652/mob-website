@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+
+{% block content %}
+    <div class= "container mt-5 page-space">
+        <form action="." method="post" class="bg-light p-4 rounded shadow">
+            {% csrf_token %}
+
+            <!-- Title field -->
+            <div class="mb-3">
+                <label for="{{ form.title.id_for_label }}" class="form-label">Title</label>
+                <!-- <input type="text" name="title" id="id_title" class="form-control" placeholder="Entrer un titre"> -->
+                <div>{{ form.title }}</div>
+            </div>
+            
+            <!-- Description field -->
+            <div class="mb-3">
+                <label for="{{ form.description.id_for_label }}" class="form-label">Description</label>
+                <!-- <input type="text" name="description" id="id_description" class="form-control" placeholder="Entrer une description"> -->
+                <div>{{ form.description }}</div>
+            </div>
+
+            <!-- Content field -->
+            <div class="mb-3">
+                <label for="{{ form.content.id_for_label }}" class="form-label">Contenu</label>
+                <!-- <input type="text" name="content" id="id_content" class="form-control" placeholder="Entrer votre annonce"> -->
+                <!-- <textarea name="content" id="id_content" class="form-conrol custom-textarea" rows="8" placeholder="Entrer votre annonce"></textarea> -->
+                <div>{{ form.content|add_class:"custom-textarea" }}</div>
+            </div>
+            <button type="submit" value="save" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+{% endblock %}

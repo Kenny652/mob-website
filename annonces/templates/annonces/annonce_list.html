@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-space container mt-5">
+    {% for instance in object_list %}
+    <div class="middle-mob">
+        <h4>- {{ instance.title }}</a></h4>
+        <div class="middle-mob-items">
+            <a href="{% url 'annonces:annonce-detail' instance.id %}" class="btn btn-primary">Lire Annonce</a>
+            <!-- <a href="{% url 'annonces:annonce-update' instance.id %}" class="btn btn-primary">Modifier</a>
+            <a href="{% url 'annonces:annonce-delete' instance.id %}" class="btn btn-primary">Effacer</a> -->
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
