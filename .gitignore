@@ -1,0 +1,72 @@
+# Python compiled files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.cover
+*.py,cover
+*.log
+*.pot
+*.mo
+*.swp
+*.swo
+*.sass-cache/
+*.seed
+*.bak
+*.orig
+*.tmp
+*.idea/
+*.vscode/
+
+# Django specific
+*.sqlite3
+db.sqlite3
+*.db
+/media/
+staticfiles/
+!static/
+*.log
+
+# Ignore environment variables and virtual environments
+.env
+*.env
+venv/
+env/
+ENV/
+.idea/
+*.DS_Store
+
+# Ignore migrations (if you want to version control them, remove this)
+**/migrations/*
+!**/migrations/__init__.py
+
+# Ignore bytecode files and compiled C extensions
+*.so
+
+# Ignore coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+
+# Ignore node_modules (if you use npm or yarn for frontend)
+node_modules/
+
+# Ignore OS-specific files
+Thumbs.db
+.DS_Store
+
+# Ignore build directories
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Ignore pytest cache
+.pytest_cache/
+
+# Ignore local configuration
+local_settings.py
