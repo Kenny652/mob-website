@@ -26,7 +26,6 @@ db.sqlite3
 staticfiles/
 !static/
 *.log
-secret_key.txt
 
 # Ignore environment variables and virtual environments
 .env
