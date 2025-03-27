@@ -44,6 +44,13 @@
     </div>
   </nav>
 
+  <!-- <div class="container">
+    {% if messages %}
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+    {% endif %}
+  </div> -->
 
   {% block content %}
 
@@ -55,8 +62,9 @@
   <div id="footer-mob">
       <div class="card-body">
         <h5 class="card-title">Contacts</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">A propos</a>
+        <p class="card-text">Adresse: Rue Chavannes Prol Berthé, Institution Mixte Aurore.</p>
+        <p>email: eglisemontdesoliviersdeberthee@gmail.com</p>
+        <a href="{% url 'home:a-propos-page' %}" class="btn btn-primary">A propos</a>
       </div>
   </div>
 </body>
