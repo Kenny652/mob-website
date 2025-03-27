@@ -25,9 +25,9 @@ with open(os.path.join(BASE_DIR, 'secret_key.txt')) as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['3.149.0.54', 'localhost']
+ALLOWED_HOSTS = ['3.135.195.207', '*', 'localhost']
 
 
 # Application definition
@@ -117,6 +117,11 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+USE_L10N = True
+
+
+
 
 
 # Static files (CSS, JavaScript, Images)
