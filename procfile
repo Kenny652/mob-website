@@ -1,3 +1,3 @@
-web: gunicorn mob-website.wsgi --log-file - 
+web: gunicorn mysite.wsgi --log-file - 
 #or works good with external database
-web: python manage.py migrate && gunicorn mob-website.wsgi
+web: python manage.py migrate && gunicorn mysite.wsgi
