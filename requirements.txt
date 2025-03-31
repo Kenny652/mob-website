@@ -3,3 +3,5 @@ pillow
 gunicorn
 whitenoise
 psycopg2-binary
+django-extensions 
+django-widget-tweaks
