@@ -70,3 +70,6 @@ dist/
 
 # Ignore local configuration
 local_settings.py
+
+cert.crt
+cert.key
