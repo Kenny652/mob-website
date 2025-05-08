@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="page-space row d-flex justify-content-center align-items-center h-100">
+    {% if form.errors %}
+
+    <div class="alert alert-danger" role="alert">
+        <p>Une erreur s'est produite... Réessayez plus tard!</p>
+    </div>
+    
+    {% endif %}
+    <h1>Inscription</h1>
+    <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3 middle-mob">
+            <form action="{% url 'users:register' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

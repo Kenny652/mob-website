@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 <div class="page-space container mt-5">
     <h1>Annonces</h1>
     <h4>Selectionnez une option</h4>
@@ -10,10 +9,25 @@
             <h3>Voir Annonces</h3>
             <a href="{% url 'annonces:annonce-list' %}" class="btn btn-primary">Entrer</a>
         </div>
+    {% if user.is_authenticated %}
+        {% if user.is_staff %}
         <div class="middle-mob-items">
-            <h3>Creer une Annonce</h3>
+            <h3>Créer une Annonce</h3>
             <a href="{% url 'annonces:annonce-create' %}" class="btn btn-primary">Entrer</a>
         </div>
+        {% else %}
+        <div class="middle-mob-items">
+            <h6>Vous devriez faire partie du staff pour<br>ajouter une annonce</h6>
+        </div>
+        {% endif %}
+    {% else %}
+        {% if not user.is_authenticated %}
+        <div class="middle-mob-items">
+            <h6>Créer un compte pour ajouter une annonce!</h6>
+            <a class="btn btn-primary" href="{% url 'users:register' %}">Inscrire</a>
+        </div>
+        {% endif %}
+    {% endif %}
     </div>
 </div>
 

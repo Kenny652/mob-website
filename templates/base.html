@@ -29,12 +29,27 @@
           <li class="nav-item">
             <a class="nav-link" href="https://www.gofundme.com/f/aideznous-a-agrandir-notre-eglise">Achat de Terrain</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home:ja-info-page' %}">JA(Jeunesse Adventiste)</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Membres
+            </a>
+            <ul class="dropdown-menu">
+              {% if user.is_authenticated %}
+              <li><a class="dropdown-item" href="{% url 'users:logout' %}">Déconnexion</a></li>
+              {% else %}
+              <li><a class="dropdown-item" href="{% url 'users:login' %}">Connexion</a></li>
+              <li><a class="dropdown-item" href="{% url 'users:register' %}">Inscription</a></li>
+              {% endif %}
+            </ul>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Plus
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{% url 'home:ja-info-page' %}">JA(Jeunesse Adventiste)</a></li>
               <li><a class="dropdown-item" href="{% url 'home:ministere-info-page' %}">Ministères</a></li>
               <li><a class="dropdown-item" href="https://www.gofundme.com/f/aideznous-a-agrandir-notre-eglise">Faire un don</a></li>
               <li><a class="dropdown-item" href="{% url 'home:a-propos-page' %}">A Propos</a></li>
@@ -45,21 +60,20 @@
     </div>
   </nav>
 
-  <!-- <div class="container">
+  <div class="container">
     {% if messages %}
       {% for message in messages %}
+      <div class="alert alert-danger" role="alert">
         {{ message }}
+      </div>
       {% endfor %}
     {% endif %}
-  </div> -->
+  </div>
 
   {% block content %}
 
   {% endblock %}
   
-
-
-
   <div id="footer-mob">
       <div class="card-body">
         <h5 class="card-title">Contacts</h5>
