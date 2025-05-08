@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'home',
     'annonces',
     'users',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
