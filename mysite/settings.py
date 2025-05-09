@@ -28,7 +28,7 @@ with open(os.path.join(BASE_DIR, 'secret_key.txt')) as f:
 DEBUG = True
 
 ALLOWED_HOSTS = ['https://mobhaiti.com', 'mobhaiti.com' 'mob-website-production.up.railway.app', 'https://mob-website-production.up.railway.app', '127.0.0.1', 'mobhaiti.com']
-CSRF_TRUSTED_ORIGINS = ['https://mobhaiti.com', 'https://mob-website-production.up.railway.app', 'mobhaiti.com']
+CSRF_TRUSTED_ORIGINS = ['https://mobhaiti.com', 'https://mob-website-production.up.railway.app']
 
 
 # Application definition
