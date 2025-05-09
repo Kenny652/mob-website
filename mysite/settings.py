@@ -51,7 +51,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -84,29 +84,29 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-#Development database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mob-websitedb',
-        'USER': 'postgres',
-        'PASSWORD': 'python',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-
-# Deployment database
+# Development database
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',
+#         'NAME': 'mob-websitedb',
 #         'USER': 'postgres',
-#         'PASSWORD': 'fSHeSJvVPrBZzNwvDZEEtxbRTfAhDWkm',
-#         'HOST': 'crossover.proxy.rlwy.net',
-#         'PORT': '27593',
+#         'PASSWORD': 'python',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
 #     }
 # }
+
+# Deployment database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'fSHeSJvVPrBZzNwvDZEEtxbRTfAhDWkm',
+        'HOST': 'crossover.proxy.rlwy.net',
+        'PORT': '27593',
+    }
+}
 
 
 # Password validation
@@ -168,7 +168,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-# STATICSTORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICSTORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
